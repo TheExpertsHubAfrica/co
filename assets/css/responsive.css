@@ -77,7 +77,8 @@
 	.section-skills,
 	.section-portfolio,
 	.section-form {
-	    padding-bottom: 90px;
+	    /* padding-bottom: 90px; */
+		padding: 0px 20px 90px 20px;
 	}
 
 	.site-section h2,

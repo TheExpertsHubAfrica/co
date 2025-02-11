@@ -284,8 +284,15 @@ html, body {
    padding-top: 120px;
 }
 
-.space-around{
+.space-around {
     margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.space-around:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .site-section h2,
@@ -396,16 +403,21 @@ html, body {
     height: 280px;
     margin-bottom: 30px;
     position: relative;
+    align-items: center;
 }
 
 .section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
     margin-bottom: 0;
 }
 
+.portfolio-item img {
+    width: 100%;
+}
+
 .portfolio-item:before {
     content: '';
     height: 100%;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 0;
     left: 0;
