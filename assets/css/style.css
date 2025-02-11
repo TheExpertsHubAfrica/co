@@ -284,6 +284,10 @@ html, body {
    padding-top: 120px;
 }
 
+.space-around{
+    margin: 10px 0;
+}
+
 .site-section h2,
 .site-section h3 {
     font-size: 36px;
