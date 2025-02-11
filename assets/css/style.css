@@ -133,6 +133,17 @@ textarea {
     font-size: 16px;
 }
 
+.icon {
+    background-color: #dfdfdf;
+}
+
+.icon img {
+    width: 20px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Align images properly */
+    vertical-align: middle; /* Align with text if any */
+}
+
 /* LAYOUT
 ================================================== */
 html, body {
@@ -144,6 +155,7 @@ html, body {
     font-size: 16px;
     color: #212121;
     background-image: url(/co/assets/img/hero.jpg);
+    im
 }
 
 .img-res {
