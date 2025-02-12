@@ -92,7 +92,7 @@
                 </div>
             
                 <div class="col-md-6 text-right">
-                    <img src="assets/img/alex-vidal.PNG" alt="">
+                    <img src="assets/img/expertshubgif-ezgif.com-gif-maker.gif" alt="">
                 </div>
 
             </div>
@@ -292,7 +292,7 @@
                 </div>
                 <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">&copy; 2025. All Rights Reserved. The Experts Hub Africa</p></div>
                 <div class="col-sm-4 col-xs-3">
-                    <div class="text-right page-scroll">
+                    <div class="text-right page-scroll fixed-bottom-right">
                         <a class="icon icon-up-bg" href="#hero"><i class="icon-up"></i></a>
                     </div>
                 </div>
@@ -433,6 +433,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollButton = document.querySelector('.fixed-bottom-right');
+            
+            // Show button on scroll
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 150) { // Adjusted scroll threshold to 150
+                    scrollButton.classList.add('visible');
+                } else {
+                    scrollButton.classList.remove('visible');
+                }
+            });
+
+            // Show button when reaching the bottom of the page
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    scrollButton.classList.add('visible');
+                }
+            });
+
+            // Smooth scroll to top when button is clicked
+            scrollButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling
+                });
+            });
+        });
+    </script>
   
 </body>
 </html>
