@@ -297,6 +297,11 @@ html, body {
    padding-top: 120px;
 }
 
+.fit{
+    width: 44.94px;
+    height: 44.95px;
+}
+
 .space-around {
     margin: 10px 0;
     cursor: pointer;
@@ -358,7 +363,7 @@ html, body {
 
 .section-services:before {
     content: '';
-    background: url(../img/services-bg.jpg) no-repeat fixed center / cover;
+    background: url(../img/Portfolio-4.png) no-repeat fixed center / cover;
     width: 100%;
     height: 400px; 
     position: absolute;
@@ -410,6 +415,7 @@ html, body {
 /* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
+    margin-top: 100px;
 }
 
 .portfolio-item {
@@ -611,6 +617,11 @@ html, body {
     background-color: #fff;
 }
 
+.linkedin-bg,
+.icon-up-bg{
+    color: #212121;
+}
+
 .site-footer a {
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
     -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -622,8 +633,8 @@ html, body {
 a.twitter-bg:hover {color: #55acee;}
 a.facebook-bg:hover{color: #3b5998;}
 a.gplus-bg:hover{color: #007bb5;} 
-a.linkedin-bg:hover {color: #dd4b39;}
-a.icon-up-bg:hover {color: #212121;}
+a.linkedin-bg:hover {color: #422724;}
+a.icon-up-bg:hover {color: #4b4a4a;}
 
 .copyright {
     margin-bottom: 0;
