@@ -617,10 +617,16 @@ html, body {
     background-color: #fff;
 }
 
-.linkedin-bg,
-.icon-up-bg{
+.linkedin-bg {
     color: #212121;
 }
+
+.icon-up-bg{
+    color: #f0eded;
+    background-color: #000;
+}
+
+
 
 .site-footer a {
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -634,7 +640,7 @@ a.twitter-bg:hover {color: #55acee;}
 a.facebook-bg:hover{color: #3b5998;}
 a.gplus-bg:hover{color: #007bb5;} 
 a.linkedin-bg:hover {color: #422724;}
-a.icon-up-bg:hover {color: #4b4a4a;}
+a.icon-up-bg:hover {color: #212121;}
 
 .copyright {
     margin-bottom: 0;
