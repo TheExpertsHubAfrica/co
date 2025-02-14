@@ -95,6 +95,12 @@ h4 {
     border: 1px solid #212121; 
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-fill:hover,
 .btn-fill:focus {
     color: #fff;
@@ -663,4 +669,45 @@ a.icon-up-bg:hover {color: #212121;}
 .fixed-bottom-right.visible {
     display: block; /* Show when visible */
     opacity: 1; /* Fully visible */
+}
+
+/* Gallery Section Styles */
+.gallery {
+    padding: 60px 0; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color */
+    display: flex; /* Use flexbox for the gallery */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.gallery h3 {
+    margin-bottom: 30px; /* Space below the title */
+    font-size: 2.5em; /* Title font size */
+    color: #333; /* Title color */
+}
+
+.gallery .row {
+    display: flex; /* Use flexbox for the row */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items in the row */
+}
+
+.gallery-item {
+    margin: 15px; /* Space between images */
+    flex: 0 0 30%; /* Each item takes up 30% of the row */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.gallery-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 45%; /* Each item takes up 45% of the row on mobile */
+    }
 }
