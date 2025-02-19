@@ -711,3 +711,28 @@ a.icon-up-bg:hover {color: #212121;}
         flex: 0 0 45%; /* Each item takes up 45% of the row on mobile */
     }
 }
+
+/* WhatsApp Chat Icon Styles */
+.whatsapp-chat {
+    position: fixed;
+    bottom: 100px; /* Adjust position above the back to top button */
+    right: 20px; /* Position from the right */
+    z-index: 10; /* Ensure it appears above other content */
+    text-align: center; /* Center the text */
+    background: transparent;
+}
+
+.chat-text {
+    display: none; /* Initially hidden */
+    background: transparent; /* Background for text */
+    color: #0a0000; /* Text color */
+    padding: 5px 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 5px; /* Space between text and icon */
+    font-size: 12px; /* Font size */
+}
+
+.icon-whatsapp img {
+    width: 40px; /* Set the desired width for the icon */
+    height: auto; /* Maintain aspect ratio */
+}
