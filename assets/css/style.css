@@ -724,12 +724,13 @@ a.icon-up-bg:hover {color: #212121;}
 
 .chat-text {
     display: none; /* Initially hidden */
-    background: transparent; /* Background for text */
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for better visibility */
     color: #0a0000; /* Text color */
     padding: 5px 10px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 10px 10px 5px 5px; /* Rounded corners (top corners rounded) */
     margin-bottom: 5px; /* Space between text and icon */
     font-size: 12px; /* Font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for prominence */
 }
 
 .icon-whatsapp img {
