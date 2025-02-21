@@ -265,33 +265,49 @@
         </section><!-- /.section-counters -->
         
         <section id="gallery" class="gallery">
-            <div class="container"></div>
+            <div class="container">
                 <div class="text-center">
                     <h3>Gallery</h3>
                     <img src="assets/img/lines.svg" class="img-lines" alt="lines">
                 </div>
-                <div class="row">
-                    <!-- <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="assets/gallery/Mr. Prince.jpg" class="img-res" alt="Gallery Image 1">
+                <div class="gallery-wrapper">
+                        <div class="row mobile">
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/team with Abel.jpg" class="img-res" alt="Gallery Image 2">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/sponsors.jpg" class="img-res" alt="Gallery Image 3">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/prince with paa .jpg" class="img-res" alt="Gallery Image 4">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/serwaa professional.jpg" class="img-res" alt="Gallery Image 5">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/workers.jpg" class="img-res" alt="Gallery Image 6">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/serwaa.jpg" class="img-res" alt="Gallery Image 7">
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="gallery-item">
+                                    <img src="assets/gallery/team with Abel.jpg" class="img-res" alt="Gallery Image 8">
+                                </div>
+                            </div>
                         </div>
-                    </div> -->
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="assets/gallery/team with Abel.jpg" class="img-res" alt="Gallery Image 2">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="assets/gallery/sponsors.jpg" class="img-res" alt="Gallery Image 3">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="assets/gallery/prince with paa .jpg" class="img-res" alt="Gallery Image 3">
-                        </div>
-                    </div>
-                    </div>
                 </div>
                 <div class="center">
                     <a href="gallery.html" class="btn btn-fill">View More</a>
@@ -532,6 +548,34 @@
             toggleChatText();
             setInterval(toggleChatText, showDuration + hideDuration);
         });
+
+        ;(function () {
+    'use strict';
+
+    // Existing code...
+
+    // Function to detect scroll to the "Start Now" button
+    var startNowPopUp = function() {
+        const startNowButton = document.querySelector('.btn-fill'); // Select the button
+        const buttonPosition = startNowButton.getBoundingClientRect().top; // Get button position relative to viewport
+        const windowHeight = window.innerHeight; // Get window height
+
+        window.addEventListener('scroll', function() {
+            if (buttonPosition < windowHeight) {
+                startNowButton.classList.add('pop-up'); // Add pop-up class when in view
+            }
+        });
+    };
+
+    $(function(){
+        magnifPopup();
+        offCanvass();
+        mobileMenuOutsideClick();
+        animateBoxWayPoint();
+        startNowPopUp(); // Call the pop-up function
+    });
+
+}());
     </script>
   
 </body>

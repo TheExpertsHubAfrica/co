@@ -161,16 +161,15 @@ html, body {
     font-size: 16px;
     color: #212121;
     background-image: url(/co/assets/img/hero.jpg);
-    im
 }
 
 .img-res {
-    display: block;
-    width: 100vw;
-    height: 100vh;
+    /* display: block;
+    width: 200vw;
+    height: 200vh;
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-height: 100%; */
+    /* object-fit: cover; */
 }
 
 .visible-xxs {
@@ -692,24 +691,83 @@ a.icon-up-bg:hover {color: #212121;}
     justify-content: center; /* Center items in the row */
 }
 
+.gallery-wrapper {
+    overflow: visible; /* Hide overflow to create a scrolling effect */
+    position: relative; /* Position relative for absolute children */
+    width: 100%; /* Full width */
+    
+}
+
+.gallery-scroll {
+    display: flex; /* Use flexbox for horizontal layout */
+    animation: scroll-left 20s linear infinite; /* Animation for scrolling */
+}
+
+.row.mobile {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping to keep items in a single row */
+    
+}
+
+.custom-col {
+    flex: 0 0 auto; /* Allow columns to size based on content */
+    width: 50%; /* Set to 50% width for larger columns */
+    margin: 5px; /* Reduce margin for spacing between images */
+}
+
 .gallery-item {
-    margin: 15px; /* Space between images */
-    flex: 0 0 30%; /* Each item takes up 30% of the row */
-    box-sizing: border-box; /* Include padding and border in width */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    overflow: hidden; /* Ensure the border radius is applied to the image */
+    position: relative; /* Position relative for absolute children */
 }
 
 .gallery-item img {
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border-radius: 10px; /* Ensure images have rounded corners */
+}
+
+/* Animation for individual image scrolling */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-100%); /* End position (move entire group) */
+    }
 }
 
 /* Media Query for Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .gallery-item {
-        flex: 0 0 45%; /* Each item takes up 45% of the row on mobile */
+        width: 100%; /* Each item takes up 100% of the row on mobile */
     }
+
+    .gallery-item img {
+        width: 100%;
+    }
+
+    .gallery-scroll {
+        animation: scroll-left-mobile 20s linear infinite; /* Adjust animation for mobile */
+    }
+
+    @keyframes scroll-left-mobile {
+        0% {
+            transform: translateX(0); /* Start position */
+        }
+        100% {
+            transform: translateX(-100%); /* End position */
+        }
+    }
+}
+
+.row.mobile {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping to keep items in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 /* WhatsApp Chat Icon Styles */
@@ -736,4 +794,24 @@ a.icon-up-bg:hover {color: #212121;}
 .icon-whatsapp img {
     width: 40px; /* Set the desired width for the icon */
     height: auto; /* Maintain aspect ratio */
+}
+
+/* Pop-up Animation */
+@keyframes pop-up {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.btn-fill.pop-up {
+    animation: pop-up 0.5s ease forwards; /* Apply the pop-up animation */
 }

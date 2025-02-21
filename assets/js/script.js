@@ -87,3 +87,21 @@ $(function() {
     });
     
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryScroll = document.querySelector('.gallery-wrapper');
+    const images = document.querySelectorAll('.gallery-item');
+
+    // Set the width of the gallery scroll based on the number of images
+    const totalWidth = images.length * 14; // Assuming each image takes 100% width
+    galleryScroll.style.width = totalWidth + '%';
+
+    // Function to animate individual images
+    function animateImages() {
+        images.forEach((image, index) => {
+            image.style.animation = `scroll-left 20s linear infinite ${index * 2}s`;
+        });
+    }
+
+    animateImages();
+});

@@ -94,6 +94,7 @@
 		offCanvass();
 		mobileMenuOutsideClick();
 		animateBoxWayPoint();
+		startNowPopUp(); // Call the pop-up function
 	});
 
 
