@@ -105,3 +105,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animateImages();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeSwitch = document.getElementById('themeSwitch');
+    const heroSection = document.getElementById('hero'); // Select the hero section
+    const logo = document.getElementById('site-logo'); // Select the logo
+    const body = document.body; // Save the body element in a variable
+
+    // Check for saved user preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
+        body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
+        logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+        themeSwitch.checked = true; // Set switch to checked
+    }
+
+    themeSwitch.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+
+        // Change background image and logo based on dark mode status
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
+            body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
+            logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            heroSection.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for hero section
+            body.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for body
+            logo.src = "assets/img/logo.png"; // Change logo back to original version
+        }
+    });
+});
