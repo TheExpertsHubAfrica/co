@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to animate individual images
     function animateImages() {
         images.forEach((image, index) => {
-            image.style.animation = `scroll-left 20s linear infinite ${index * 2}s`;
+            image.style.animation = `scroll-left 10s linear infinite ${index * 0.5}s`;
         });
     }
 
