@@ -952,12 +952,13 @@ body.dark-mode .gallery h3 {
 .navbar-header {
     display: flex; /* Use flexbox for alignment */
     justify-content: start; /* Space between logo and toggle buttons */
-    align-items: center; /* Center items vertically */
+    align-items: top; /* Center items vertically */
     position: relative;
 }
 
 /* Styles for the theme switch in mobile view */
 .theme-switch {
+    margin-top: 5px;
     margin-right: 10px; /* Space between the toggle buttons */
 }
 
