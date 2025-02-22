@@ -900,9 +900,39 @@ body.dark-mode .gallery h3 {
 }
 
 .theme-switch {
+    position: relative;
     display: inline-block; /* Align next to the navbar toggle */
     margin-left: 10px; /* Space between the toggle buttons */
     vertical-align: middle; /* Align vertically with the navbar toggle */
+}
+
+.sun,
+.moon {
+ width: 16px;
+}
+
+.sun {
+    position: absolute;
+    z-index: -2;
+    top: 9px;
+    left: 9px;
+}
+
+.moon {
+    position: absolute;
+    z-index: 0;
+    top: 9px;
+    right: 9px;
+}
+
+body.dark-mode .sun {
+    opacity: 1; /* Hide the sun icon */
+    z-index: 1;
+}
+
+body.dark-mode .moon {
+    opacity: 0; /* Show the moon icon */
+    z-index: -2;
 }
 
 .theme-switch__input {
