@@ -414,6 +414,10 @@ body {
     width: 50%;
 }
 
+.servicesss img {
+    width: 15%;
+}
+
 .service ul {
     text-align: center;
     list-style-type: none; /* Example: remove bullet points */
@@ -872,7 +876,7 @@ body.dark-mode .section-services .container {
 }
 
 body.dark-mode .service img {
-    background-color: white;
+    /* background-color: white; */
 }
 
 /* Dark Mode Styles for Modal Header Close Button */

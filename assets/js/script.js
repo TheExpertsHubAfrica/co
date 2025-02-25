@@ -109,32 +109,47 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const themeSwitch = document.getElementById('themeSwitch');
     const heroSection = document.getElementById('hero'); // Select the hero section
-    const logo = document.getElementById('site-logo'); // Select the logo
+    // const logo = document.getElementById('site-logo'); // Select the logo
     const body = document.body; // Save the body element in a variable
+    const frontEndIcon = document.querySelector('.front-end-icon'); // Select the front-end icon
+    const backEndIcon = document.querySelector('.back-end-icon'); // Select the back-end icon
 
     // Check for saved user preference
     if (localStorage.getItem('dark-mode') === 'enabled') {
         document.body.classList.add('dark-mode');
         heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
         body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
-        logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+        // logo.src = "assets/img/logoWhite.png"; // Change logo to white version
         themeSwitch.checked = true; // Set switch to checked
+        updateServiceIcons(true); // Update icons for dark mode
     }
 
     themeSwitch.addEventListener('change', function() {
-        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.toggle('dark-mode'); // Toggle dark mode and store the state
 
         // Change background image and logo based on dark mode status
-        if (document.body.classList.contains('dark-mode')) {
+        if (isDarkMode) {
             localStorage.setItem('dark-mode', 'enabled');
             heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
             body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
-            logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+            // logo.src = "assets/img/logoWhite.png"; // Change logo to white version
         } else {
             localStorage.setItem('dark-mode', 'disabled');
             heroSection.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for hero section
             body.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for body
-            logo.src = "assets/img/logo.png"; // Change logo back to original version
+            // logo.src = "assets/img/logo.png"; // Change logo back to original version
         }
+
+        updateServiceIcons(isDarkMode); // Update icons based on the current mode
     });
+
+    function updateServiceIcons(isDarkMode) {
+        if (isDarkMode) {
+            frontEndIcon.src = 'assets/img/front-end-white.svg'; // Change to white icon
+            backEndIcon.src = 'assets/img/back-end-white.svg'; // Change to white icon
+        } else {
+            frontEndIcon.src = 'assets/img/front-end.svg'; // Change back to original icon
+            backEndIcon.src = 'assets/img/back-end.svg'; // Change back to original icon
+        }
+    }
 });
