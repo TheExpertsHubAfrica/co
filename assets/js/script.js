@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body; // Save the body element in a variable
     const frontEndIcon = document.querySelector('.front-end-icon'); // Select the front-end icon
     const backEndIcon = document.querySelector('.back-end-icon'); // Select the back-end icon
+    const travelIcon = document.getElementById('travel-icon'); // Select the travel icon
 
     // Check for saved user preference
     if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -147,9 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isDarkMode) {
             frontEndIcon.src = 'assets/img/front-end-white.svg'; // Change to white icon
             backEndIcon.src = 'assets/img/back-end-white.svg'; // Change to white icon
+            travelIcon.src = 'assets/img/consultancyWhite.svg'; // Change to white icon
         } else {
             frontEndIcon.src = 'assets/img/front-end.svg'; // Change back to original icon
             backEndIcon.src = 'assets/img/back-end.svg'; // Change back to original icon
+            travelIcon.src = 'assets/img/consultancy.svg'; // Change to white icon
         }
     }
 });
