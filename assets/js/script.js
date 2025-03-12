@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const themeSwitch = document.getElementById('themeSwitch');
     const heroSection = document.getElementById('hero'); // Select the hero section
-    // const logo = document.getElementById('site-logo'); // Select the logo
+    const logo = document.getElementById('site-logo'); // Select the logo
     const body = document.body; // Save the body element in a variable
     const frontEndIcon = document.querySelector('.front-end-icon'); // Select the front-end icon
     const backEndIcon = document.querySelector('.back-end-icon'); // Select the back-end icon
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
         heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
         body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
-        // logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+        logo.style.backgroundColor = "white"; // Change logo to white version
         themeSwitch.checked = true; // Set switch to checked
         updateServiceIcons(true); // Update icons for dark mode
     }
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('dark-mode', 'enabled');
             heroSection.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for hero section
             body.style.backgroundImage = "url('assets/img/heroDark.png')"; // Set dark mode background for body
-            // logo.src = "assets/img/logoWhite.png"; // Change logo to white version
+            logo.style.backgroundColor = "white"; // Change logo to white version
         } else {
             localStorage.setItem('dark-mode', 'disabled');
             heroSection.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for hero section
