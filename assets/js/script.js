@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('dark-mode', 'disabled');
             heroSection.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for hero section
             body.style.backgroundImage = "url('assets/img/hero.jpg')"; // Set light mode background for body
-            // logo.src = "assets/img/logo.png"; // Change logo back to original version
+            logo.style.background = "none"; // Change logo back to original version
         }
 
         updateServiceIcons(isDarkMode); // Update icons based on the current mode
