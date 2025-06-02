@@ -724,6 +724,7 @@ a.icon-up-bg:hover {color: #212121;}
 }
 
 .gallery-item {
+    width: 600px;
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     overflow: hidden; /* Ensure the border radius is applied to the image */
